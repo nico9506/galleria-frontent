@@ -2,9 +2,10 @@ import "./Product.css";
 import { useState } from "react";
 import plusIcon from "../assets/plusIcon.svg";
 import minusIcon from "../assets/minusIcon.svg";
+import cartIcon from "../assets/cartIcon.svg";
 
 interface Prop {
-  painting_id: number;
+  painting_id: string;
   title: string;
   description: string;
   price: number;
@@ -44,6 +45,7 @@ const Product = ({
         onClick={handleCartClick}
       >
         <img src={handleCartIconChange(productSelected)} />
+        <img src={cartIcon} />
       </button>
     </div>
   );

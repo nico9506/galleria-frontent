@@ -1,0 +1,30 @@
+.shelf {
+  width: 100%;
+  height: min-content;
+  background-color: #000;
+  background-image: url("../assets/wood-pattern.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.filters {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.filters div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: min-content;
+}
