@@ -27,8 +27,6 @@ const Shelf = () => {
 
   return (
     <>
-      <Navbar></Navbar>
-
       <div className="shelf">
         <h1>Browse in our delightful collection</h1>
 

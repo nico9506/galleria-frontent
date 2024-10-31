@@ -82,3 +82,26 @@
   height: 90%;
   width: auto;
 }
+
+@media screen and (min-width: 900px) {
+  .product {
+    max-width: 400px;
+    height: 37rem;
+  }
+
+  .product p {
+    height: 5.5rem;
+    overflow-y: auto;
+  }
+
+  .product > img {
+    height: 15rem;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .product {
+    max-width: 350px;
+  }
+}

@@ -9,6 +9,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
+  max-width: 1260px;
 }
 
 .filters {
