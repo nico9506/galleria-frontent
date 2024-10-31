@@ -2,6 +2,7 @@ import { useId, useState } from "react";
 import dummyObject from "../services/paintingsData";
 import Product from "./Product";
 import "./Shelf.css";
+import Navbar from "./Navbar";
 
 const Shelf = () => {
   const [paintingsCollection] = useState(dummyObject);
@@ -25,57 +26,61 @@ const Shelf = () => {
   const filteredCollection = filterPaintings(paintingsCollection);
 
   return (
-    <div className="shelf">
-      <h1>Browse in our delightful collection</h1>
+    <>
+      <Navbar></Navbar>
 
-      <section className="filters">
-        <div>
-          <label htmlFor={maxPriceId}>Max price</label>
-          <input type="number" id={maxPriceId} min="0" />
-        </div>
+      <div className="shelf">
+        <h1>Browse in our delightful collection</h1>
 
-        <div>
-          <label htmlFor={typeId}>Type</label>
-          <select id={typeId}>
-            <option value="all">All</option>
-            <option value="oil">Oil</option>
-            <option value="acrylic">Acrylic</option>
-            <option value="watercolor">Watercolor</option>
-            <option value="pastel">Pastel</option>
-            <option value="gouache">Gouache</option>
-            <option value="ink">Ink</option>
-            <option value="fresco">Fresco</option>
-            <option value="tempera">Tempera</option>
-            <option value="digital">Digital</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-      </section>
+        <section className="filters">
+          <div>
+            <label htmlFor={maxPriceId}>Max price</label>
+            <input type="number" id={maxPriceId} min="0" />
+          </div>
 
-      {filteredCollection.map((item) => {
-        const {
-          painting_id,
-          title,
-          description,
-          price,
-          image_url,
-          type,
-          artist_id,
-        } = item;
-        return (
-          <Product
-            key={painting_id}
-            painting_id={painting_id}
-            title={title}
-            description={description}
-            price={price}
-            image_url={image_url}
-            type={type}
-            artist_id={artist_id}
-          ></Product>
-        );
-      })}
-    </div>
+          <div>
+            <label htmlFor={typeId}>Type</label>
+            <select id={typeId}>
+              <option value="all">All</option>
+              <option value="oil">Oil</option>
+              <option value="acrylic">Acrylic</option>
+              <option value="watercolor">Watercolor</option>
+              <option value="pastel">Pastel</option>
+              <option value="gouache">Gouache</option>
+              <option value="ink">Ink</option>
+              <option value="fresco">Fresco</option>
+              <option value="tempera">Tempera</option>
+              <option value="digital">Digital</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </section>
+
+        {filteredCollection.map((item) => {
+          const {
+            painting_id,
+            title,
+            description,
+            price,
+            image_url,
+            type,
+            artist_id,
+          } = item;
+          return (
+            <Product
+              key={painting_id}
+              painting_id={painting_id}
+              title={title}
+              description={description}
+              price={price}
+              image_url={image_url}
+              type={type}
+              artist_id={artist_id}
+            ></Product>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
