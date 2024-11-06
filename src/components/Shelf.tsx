@@ -2,7 +2,6 @@ import { useId, useState } from "react";
 import dummyObject from "../services/paintingsData";
 import Product from "./Product";
 import "./Shelf.css";
-import Navbar from "./Navbar";
 
 const Shelf = () => {
   const [paintingsCollection] = useState(dummyObject);
@@ -28,8 +27,6 @@ const Shelf = () => {
   return (
     <>
       <div className="shelf">
-        <h1>Browse in our delightful collection</h1>
-
         <section className="filters">
           <div>
             <label htmlFor={maxPriceId}>Max price</label>

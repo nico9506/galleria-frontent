@@ -1,0 +1,50 @@
+.hero-section {
+  padding: 0 1rem;
+  background-color: #111;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  height: fit-content;
+  width: 100%;
+  border-bottom: 4px solid black;
+}
+
+.hero-section > .left-side,
+.hero-section > .right-side {
+  margin: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+}
+
+.hero-section > .left-side > h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.hero-section > .right-side > img {
+  width: 100%;
+  max-width: 30rem;
+}
+
+@media screen and (min-width: 700px) {
+  .hero-section > .left-side,
+  .hero-section > .right-side {
+    width: 45%;
+    height: 100%;
+  }
+
+  .hero-section > .left-side {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .hero-section > .left-side,
+  .hero-section > .right-side {
+    width: 35%;
+  }
+}

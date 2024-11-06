@@ -1,14 +1,10 @@
 import "./App.css";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Shelf from "./components/Shelf";
+import GalleriaShowCase from "./pages/GalleriaShowCase";
 
 function App() {
   return (
     <>
-      <Navbar></Navbar>
-      <Shelf></Shelf>
-      <Footer></Footer>
+      <GalleriaShowCase></GalleriaShowCase>
     </>
   );
 }
