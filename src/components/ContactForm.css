@@ -1,0 +1,71 @@
+.formContainer {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formContainer h1 {
+  font-family: cursive;
+}
+
+.formContainer form {
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+  width: 90%;
+  min-width: 300px;
+  max-width: 600px;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.formContainer form div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formContainer form div label {
+  width: 150px;
+  text-align: left;
+  align-self: flex-start;
+  margin: 0;
+  padding: 0;
+}
+.formContainer form div input,
+.formContainer form div textarea {
+  font-size: 1rem;
+  flex-grow: 2;
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+.formContainer form div textarea {
+  height: 15rem;
+  overflow-y: auto;
+}
+
+.formContainer form div button {
+  /*width: 7rem;*/
+  /*height: 2rem;*/
+  margin: 2rem auto 0;
+  font-size: 1.8rem;
+  font-family: cursive;
+  width: 15rem;
+  height: 3.5rem;
+  border: 0px transparent;
+  border-radius: 4px;
+  background-color: black;
+  color: whitesmoke;
+  transition: box-shadow 0.25s;
+}
+
+.formContainer form div button:hover {
+  box-shadow: 0 0 8px 1px goldenrod inset;
+  border: 1px solid goldenrod;
+  cursor: pointer;
+}

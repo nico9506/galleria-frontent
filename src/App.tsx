@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import GalleriaShowCase from "./pages/GalleriaShowCase";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           path="/galleria"
           element={<GalleriaShowCase></GalleriaShowCase>}
         />
+        <Route path="/contact" element={<Contact></Contact>} />
+        <Route path="/about" element={<HomePage></HomePage>} />
       </Routes>
       <Footer></Footer>
     </Router>
