@@ -13,10 +13,11 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  transition: background-color 0.25s;
 }
 
 .topnav a:hover {
-  background-color: lightgray;
+  background-color: whitesmoke;
   color: black;
 }
 
@@ -27,17 +28,26 @@
 
 .topnav .icon {
   display: none;
+  border: 1px solid transparent;
+  transition: box-shadow 0.25s;
 }
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
   }
-  .topnav a.icon {
+  .topnav .icon {
     float: right;
     display: block;
+    background-color: transparent;
+    padding: 13px;
+    border: 1px solid transparent;
   }
-  .topnav a.icon img {
+  .topnav .icon:hover {
+    box-shadow: 1px 1px 1rem 1px whitesmoke;
+    cursor: pointer;
+  }
+  .topnav .icon img {
     height: 17px;
     width: 17px;
     filter: invert(99%) sepia(99%) saturate(24%) hue-rotate(326deg)

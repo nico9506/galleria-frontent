@@ -18,7 +18,7 @@ function HomeBanner() {
         fall in love, and bring art into your life today.
       </p>
       <button onClick={() => navigate("/galleria")}>
-        Visit <span className="siteName">Galleria</span>
+        Go to <span className="siteName">Galleria</span>
       </button>
     </div>
   );

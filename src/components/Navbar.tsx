@@ -46,9 +46,9 @@ const Navbar = () => {
       >
         About
       </Link>
-      <Link to={""} className="icon" onClick={handleClickMenuDrop}>
+      <button className="icon" onClick={handleClickMenuDrop}>
         <img src={menuIcon} alt="Menu" />
-      </Link>
+      </button>
     </nav>
   );
 };

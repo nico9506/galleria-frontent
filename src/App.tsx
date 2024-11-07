@@ -5,6 +5,7 @@ import GalleriaShowCase from "./pages/GalleriaShowCase";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           element={<GalleriaShowCase></GalleriaShowCase>}
         />
         <Route path="/contact" element={<Contact></Contact>} />
-        <Route path="/about" element={<HomePage></HomePage>} />
+        <Route path="/about" element={<About></About>} />
       </Routes>
       <Footer></Footer>
     </Router>
