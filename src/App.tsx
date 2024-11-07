@@ -1,10 +1,10 @@
 import "./App.css";
-import GalleriaShowCase from "./pages/GalleriaShowCase";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <>
-      <GalleriaShowCase></GalleriaShowCase>
+      <HomePage></HomePage>
     </>
   );
 }

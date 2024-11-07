@@ -1,0 +1,45 @@
+.homeBanner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*flex-wrap: wrap;*/
+  flex-direction: column;
+}
+
+.homeBanner h1 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 4rem;
+  font-family: cursive;
+  width: 90%;
+  max-width: 50rem;
+}
+
+.siteName {
+  font-weight: 900;
+  color: salmon;
+  font-family: cursive;
+}
+
+.homeBanner p {
+  font-size: 1.2rem;
+  width: 90%;
+  max-width: 60rem;
+}
+
+.homeBanner button {
+  font-size: 1.8rem;
+  font-family: cursive;
+  margin-top: 2rem;
+  width: 15rem;
+  height: 3.5rem;
+  border: 0px transparent;
+  border-radius: 4px;
+  background-color: black;
+  color: whitesmoke;
+}
