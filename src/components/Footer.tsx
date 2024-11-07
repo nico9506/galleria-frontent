@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import facebookIcon from "../assets/facebookIcon.svg";
 import instagramIcon from "../assets/instagramIcon.svg";
@@ -38,16 +39,16 @@ const Footer = () => {
 
       <ul className="nav-links">
         <li>
-          <a href="#">Home</a>
+          <Link to={"/"}>Home</Link>
         </li>
         <li>
-          <a href="#">Galleria</a>
+          <Link to={"/galleria"}>Galleria</Link>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Link to={"/contact"}>Contact</Link>
         </li>
         <li>
-          <a href="#">About</a>
+          <Link to={"/about"}>About</Link>
         </li>
       </ul>
 

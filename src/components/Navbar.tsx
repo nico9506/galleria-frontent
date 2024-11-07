@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import { useState } from "react";
 import menuIcon from "../assets/menuIcon.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [topnavClass, setTopnavClass] = useState("topnav");
@@ -11,46 +12,43 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState("home"); // Default active link
 
   const handleClickMenuItem = (link: string) => {
+    setTopnavClass("topnav");
     setActiveLink(link); // Set the active link on click
   };
 
   return (
     <nav className={topnavClass}>
-      <a
-        href="#home"
+      <Link
+        to="/"
         className={activeLink === "home" ? "active" : ""}
         onClick={() => handleClickMenuItem("home")}
       >
         Home
-      </a>
-      <a
-        href="#galleria"
+      </Link>
+      <Link
+        to="/galleria"
         className={activeLink === "galleria" ? "active" : ""}
         onClick={() => handleClickMenuItem("galleria")}
       >
         Galleria
-      </a>
-      <a
-        href="#contact"
+      </Link>
+      <Link
+        to="/contact"
         className={activeLink === "contact" ? "active" : ""}
         onClick={() => handleClickMenuItem("contact")}
       >
         Contact
-      </a>
-      <a
-        href="#about"
+      </Link>
+      <Link
+        to="/about"
         className={activeLink === "about" ? "active" : ""}
         onClick={() => handleClickMenuItem("about")}
       >
         About
-      </a>
-      <a
-        href="javascript:void(0);"
-        className="icon"
-        onClick={handleClickMenuDrop}
-      >
+      </Link>
+      <Link to={""} className="icon" onClick={handleClickMenuDrop}>
         <img src={menuIcon} alt="Menu" />
-      </a>
+      </Link>
     </nav>
   );
 };

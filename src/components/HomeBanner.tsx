@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "./HomeBanner.css";
 
 function HomeBanner() {
+  const navigate = useNavigate();
+
   return (
     <div className="homeBanner">
       <h1>
@@ -14,7 +17,7 @@ function HomeBanner() {
         offers a wide variety of styles and themes to suit every taste. Explore,
         fall in love, and bring art into your life today.
       </p>
-      <button>
+      <button onClick={() => navigate("/galleria")}>
         Visit <span className="siteName">Galleria</span>
       </button>
     </div>

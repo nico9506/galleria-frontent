@@ -5,10 +5,11 @@ function Banner() {
     <>
       <section className="hero-section">
         <div className="left-side">
-          <h1>This website is awesome</h1>
+          <h1>Art That Speaks to You</h1>
           <p>
-            This website has some subtext that goes here under the main title.
-            It's a smaller font and the color is lower contrast.
+            Explore a curated collection of stunning paintings, handpicked to
+            inspire and elevate your space. Find the perfect piece that speaks
+            to you today.
           </p>
         </div>
         <div className="right-side">
