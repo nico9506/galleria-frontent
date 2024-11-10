@@ -1,20 +1,23 @@
 import { useId, useState } from "react";
-import dummyObject from "../services/paintingsData";
 import Product from "./Product";
+import DataFetcher from "../services/DataFetcher";
 import "./Shelf.css";
 
 const Shelf = () => {
-  const [paintingsCollection] = useState(dummyObject);
+  const { data, loading, error } = DataFetcher(
+    "http://localhost:3000/painting",
+  );
+
+  const maxPriceId = useId();
+  const typeId = useId();
+
   const [filters, setFilters] = useState({
     type: "all",
     max_price: Infinity,
   });
 
-  const maxPriceId = useId();
-  const typeId = useId();
-
-  const filterPaintings = (paintingsCollection) => {
-    return paintingsCollection.filter((item) => {
+  const filterPaintings = (data) => {
+    return data.filter((item) => {
       return (
         item.price <= filters.max_price &&
         (filters.type === "all" || filters.type === item.type)
@@ -22,7 +25,10 @@ const Shelf = () => {
     });
   };
 
-  const filteredCollection = filterPaintings(paintingsCollection);
+  const filteredCollection = filterPaintings(data);
+
+  if (loading) return <h1>Loading...</h1>;
+  if (error) return <h1>Error: {error}</h1>;
 
   return (
     <>
