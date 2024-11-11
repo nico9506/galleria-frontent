@@ -1,6 +1,7 @@
 .shelf {
   width: 100%;
   height: min-content;
+  min-height: 80vh;
   background-color: #000;
   background-image: url("../assets/wood-pattern.png");
   display: flex;
@@ -14,11 +15,13 @@
 
 .filters {
   width: 90%;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   font-size: 1.2rem;
+  align-self: flex-start;
 }
 
 .filters div {

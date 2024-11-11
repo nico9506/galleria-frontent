@@ -30,18 +30,44 @@ const Shelf = () => {
   if (loading) return <h1>Loading...</h1>;
   if (error) return <h1>Error: {error}</h1>;
 
+  // Event handler to update max_price filter
+  const handleMaxPriceChange = (e) => {
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      max_price: e.target.value ? parseFloat(e.target.value) : Infinity, // set to Infinity if empty
+    }));
+  };
+
+  // Event handler to update type filter
+  const handleTypeChange = (e) => {
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      type: e.target.value,
+    }));
+  };
+
   return (
     <>
       <div className="shelf">
         <section className="filters">
           <div>
             <label htmlFor={maxPriceId}>Max price</label>
-            <input type="number" id={maxPriceId} min="0" />
+            <input
+              type="number"
+              id={maxPriceId}
+              min="0"
+              value={filters.max_price === Infinity ? "" : filters.max_price}
+              onChange={handleMaxPriceChange}
+            />
           </div>
 
           <div>
             <label htmlFor={typeId}>Type</label>
-            <select id={typeId}>
+            <select
+              id={typeId}
+              value={filters.type}
+              onChange={handleTypeChange}
+            >
               <option value="all">All</option>
               <option value="oil">Oil</option>
               <option value="acrylic">Acrylic</option>

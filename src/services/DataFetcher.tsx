@@ -1,20 +1,5 @@
 import { useEffect, useState } from "react";
 
-// const dummyObject = [
-//   {
-//     painting_id: 123,
-//     title: "Painting Title",
-//     description:
-//       "Lorem ipsum ... useContext. Este hook nos permite crear un estado global de nuestra aplicación sin necesidad de pasar datos a través de múltiples componentes. Al crear un contexto, podemos almacenar datos en él y luego acceder a ellos desde cualquier componente que consuma ese contexto.",
-//     price: 699900.0,
-//     image_url: "https://i.ebayimg.com/images/g/Jy0AAOSw6eFkBFZt/s-l1200.jpg",
-//     type: "oil",
-//     artist_id: 55,
-//     created_at: "25-03-2024",
-//     updated_at: new Date().toString(),
-//   },
-// ];
-
 const DataFetcher = (url: string) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
