@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         />
         <Route path="/contact" element={<Contact></Contact>} />
         <Route path="/about" element={<About></About>} />
+        <Route path="/login" element={<Login></Login>} />
       </Routes>
       <Footer></Footer>
     </Router>

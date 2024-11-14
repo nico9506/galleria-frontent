@@ -46,6 +46,13 @@ const Navbar = () => {
       >
         About
       </Link>
+      <Link
+        to="/login"
+        className={activeLink === "login" ? "active" : ""}
+        onClick={() => handleClickMenuItem("login")}
+      >
+        Login
+      </Link>
       <button className="icon" onClick={handleClickMenuDrop}>
         <img src={menuIcon} alt="Menu" />
       </button>
